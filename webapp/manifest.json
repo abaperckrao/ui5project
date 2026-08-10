@@ -1,0 +1,98 @@
+{
+  "_version": "1.86.0",
+  "sap.app": {
+    "id": "org.indexit.zsales",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.30.0",
+      "toolsId": "6b7f6daf-a2ad-4c05-87b5-81bf6c1b37c0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.151.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "org.indexit.zsales.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "org.indexit.zsales.view",
+        "async": true,
+        "viewPath": "org.indexit.zsales.view"
+      },
+      "routes": [
+        {
+          "name": "RoutePurchaseOrder",
+          "pattern": ":?query:",
+          "target": [
+            "TargetPurchaseOrder"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetPurchaseOrder": {
+          "id": "PurchaseOrder",
+          "name": "PurchaseOrder"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "org.indexit.zsales.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
