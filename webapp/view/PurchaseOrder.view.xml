@@ -2,5 +2,8 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="Purchase Order">
+    <content>
+    <Button id="_IDGenButton"/>
+    </content>
     </Page>
 </mvc:View>
