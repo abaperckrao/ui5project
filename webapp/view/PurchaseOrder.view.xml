@@ -1,6 +1,7 @@
 <mvc:View controllerName="org.indexit.zsales.controller.PurchaseOrder"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="Purchase Order">
+    <Page id="page" title="Purchase Order by MK">
+
     </Page>
 </mvc:View>
